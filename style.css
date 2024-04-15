@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    background: #f0f5fd;
+}
+
+.left-section{
+    background: #fff;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 25px 10px;
+    transition: all 0.3s ease;
+}
+
+.left-section h2{
+    color: #364670;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.left-section .sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.left-section .sidebar .item,
+.left-section .sign-out{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #364670;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.left-section .sidebar .item.active h3,
+.left-section .sidebar .item.active i,
+.left-section .sidebar .item:hover,
+.left-section .sign-out:hover{
+    color: #1976d2;
+}
+
+.left-section .sidebar .item h3,
+.left-section .sign-out h3{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.left-section .sidebar .item i,
+.left-section .sign-out i{
+    font-size: 22px;
+}
+
+.main{
+    flex: 6;
+    padding: 25px;
+}
+
+.main .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .header .search{
+    background: #fff;
+    display: flex;
+    align-items: center;
+    width: 75%;
+    padding: 8px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.main .header .search button{
+    font-size: 20px;
+    border: none;
+    background: transparent;
+}
+
+.main .header .search input{
+    padding: 4px 6px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.main .header .search i{
+    cursor: pointer;
+}
+
+.main .header .icon-btns{
+    display: flex;
+    gap: 8px;
+}
+
+.main .header .icon-btns i{
+    font-size: 20px;
+    background: #1976d2;
+    padding: 8px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main .header .icon-btns i:hover{
+    background: #0d47a1;
+}
+
+.main .header .icon-btns i#menu-btn{
+    display: none;
+}
+
+.main .separator{
+    margin: 35px 0 20px;
+    font-weight: 500;
+    color: #364670;
+}
+
+.main .quick-access{
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.main .quick-access .item{
+    background: #fff;
+    width: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.main .quick-access .item:hover{
+    box-shadow: none;
+    border-color: #999;
+}
+
+.main .quick-access .item i{
+    font-size: 46px;
+    padding: 10px;
+    border-radius: 16px;
+}
+
+.main .quick-access .item:nth-child(1) i,
+.main table tbody tr:nth-child(1) td.icon i{
+   color: #1976d2; 
+   background: #e6e4ec;
+}
+
+.main .quick-access .item:nth-child(2) i,
+.main table tbody tr:nth-child(2) td.icon i{
+    color: #1d92f1; 
+    background: #ddeffd;
+}
+
+.main .quick-access .item:nth-child(3) i,
+.main table tbody tr:nth-child(4) td.icon i{
+    color: #ffd12c; 
+    background: #fff8df;
+}
+
+.main .quick-access .item:nth-child(4) i,
+.main table tbody tr:nth-child(3) td.icon i{
+    color: #3bc963; 
+    background: #e2f7e8;
+}
+
+.main .quick-access .item h5{
+    font-size: 18px;
+    font-weight: 500;
+    color: #364670;
+    margin: 15px 0 8px;
+}
+
+.main .quick-access .item p{
+    color: #999;
+    font-size: 14px;
+}
+
+.main table{
+    background: #fff;
+    padding: 15px;
+    width: 100%;
+    border-radius: 14px;
+    border-spacing: 0 8px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.main table tbody tr{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main table tbody tr.selected,
+.main table tbody tr:hover{
+    border-radius: 14px;
+    background: #e8eaf6;
+}
+
+.main table tbody tr td{
+    padding: 16px;
+}
+
+.main table tbody tr td.icon i{
+    font-size: 20px;
+    background: #e6e4ec;
+    padding: 8px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.main table tbody tr.selected td.icon i,
+.main table tbody tr:hover td.icon i{
+    border-color: #999;
+}
+
+.main table tbody tr td.name{
+    font-weight: 500;
+    font-size: 14px;
+    color: #364670;
+}
+
+.main table tbody tr td.extension,
+.main table tbody tr td.size{
+    color: #999;
+    font-size: 14px;
+}
+
+.main table tbody tr td.more i{
+    font-size: 20px;
+}
+
+.main table tbody tr td:first-child{
+    border-radius: 14px 0 0 14px;
+    padding-left: 15px;
+}
+
+.main table tbody tr td:last-child{
+    border-radius: 0 14px 14px 0;
+}
+
+.right-section{
+    flex: 2;
+    padding: 25px 25px 15px 10px;
+}
+
+.right-section .profile{
+    background: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.right-section .profile .info{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.right-section .profile .info img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.right-section .profile .info .account h5{
+    font-size: 15px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.right-section .profile .info .account p{
+    font-size: 13px;
+    color: #999;
+}
+
+.right-section .profile > i{
+    font-size: 24px;
+    color: #364670;
+    cursor: pointer;
+}
+
+.right-section .widgets{
+    display: flex;
+    flex-direction: column;
+}
+
+.right-section .widgets .disk{
+    background: #fff;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 300px;
+    padding: 0 25px;
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.right-section .widgets .disk .progress{
+    display: flex;
+    justify-content: center;
+}
+
+.right-section .widgets .disk .progress .progress-bar{
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(closest-side, #fff 79%, transparent 80% 100%), conic-gradient(#1976d2 25%, #e9e4ff 0%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.right-section .widgets .disk .progress .progress-bar::before{
+    content: "25%";
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.right-section .widgets .disk .progress .progress-bar::after{
+    content: "used";
+    font-size: 13px;
+    color: #999;
+}
+
+.right-section .widgets .disk .info h5{
+    color: #999;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.right-section .widgets .disk h5 span{
+    color: #364670;
+}
+
+.right-section .widgets .disk .info p{
+    font-size: 14px;
+    color: #999;
+    font-weight: 500;
+}
+
+.right-section .widgets .bottom{
+    display: flex;
+    flex-direction: column;
+}
+
+.right-section .widgets .bottom button{
+    border: none;
+    background: #1976d2;
+    color: #fff;
+    margin: 30px 0;
+    font-size: 20px;
+    padding: 14px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-section .widgets .bottom button:hover{
+    background: #0d47a1;
+}
+
+.right-section .widgets .bottom .premium{
+    background: #fff;
+    padding: 25px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 16px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+    transition: all 0.3s ease;
+}
+
+.right-section .widgets .bottom .premium:hover{
+    box-shadow: none;
+    border-color: #999;
+}
+
+.right-section .widgets .bottom .premium .title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right-section .widgets .bottom .premium .title h5{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.right-section .widgets .bottom .premium .title i{
+    font-size: 30px;
+    padding: 10px;
+    background: #1976d2;
+    color: #fff;
+    border-radius: 14px;
+}
+
+.right-section .widgets .bottom .premium p{
+    color: #999;
+    font-size: 16px;
+    line-height: 1.4rem;
+}
+
+@media screen and (max-width: 1230px) {
+    
+    .left-section{
+        width: 90px;
+    }
+
+    .left-section h2{
+        font-size: 17px;
+    }
+
+    .left-section .sidebar .item{
+        justify-content: center;
+    }
+
+    .left-section .sidebar .item h3,
+    .left-section .sign-out h3{
+        display: none;
+    }
+
+    .left-section .sidebar .item i,
+    .left-section .sign-out i{
+        font-size: 26px;
+    }
+
+    .main .quick-access{
+        justify-content: space-between;
+    }
+
+    .main .quick-access .item{
+        width: 23%;
+    }
+
+    .main .quick-access .item i{
+        font-size: 36px;
+    }
+
+    .main .quick-access .item h5{
+        font-size: 16px;
+    }
+
+    .main .quick-access .item p,
+    .right-section .profile .info .account p{
+        font-size: 12px;
+    }
+
+    .right-section .widgets .disk{
+        height: 270px;
+    }
+
+    .right-section .widgets .disk .progress .progress-bar{
+        width: 120px;
+        height: 120px;
+    }
+
+    .right-section .widgets .disk .info h5{
+        font-size: 18px;
+    }
+
+    .right-section .widgets .bottom button{
+        font-size: 17px;
+        padding: 12px;
+    }
+
+    .right-section .widgets .bottom .premium .title h5{
+        font-size: 17px;
+    }
+
+    .right-section .widgets .bottom .premium .title i{
+        font-size: 26px;
+    }
+
+    .right-section .widgets .bottom .premium p{
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    
+    .left-section{
+        position: absolute;
+        width: 160px;
+        left: -160px;
+        z-index: 1000;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .left-section .sidebar .item{
+        justify-content: start;
+    }
+
+    .left-section .sidebar .item h3,
+    .left-section .sign-out h3{
+        display: block;
+    }
+
+    .left-section .sidebar .item i,
+    .left-section .sign-out i{
+        font-size: 22px;
+    }
+
+    .main,
+    .right-section{
+        padding: 15px;
+    }
+
+    .main .header{
+        gap: 10px;
+    }
+
+    .main .header .icon-btns i#menu-btn{
+        display: block;
+    }
+
+    .main .quick-access .item p{
+        text-align: center;
+    }
+
+    .main table tbody tr td.name,
+    .main table tbody tr td.extension,
+    .main table tbody tr td.size{
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    body{
+        flex-direction: column;
+    }
+
+    .main{
+        padding: 26px 15px 0;
+    }
+
+    .main .header{
+        justify-content: start;
+    }
+
+    .main .header .search{
+        width: 30%;
+    }
+
+    .right-section .profile{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    .right-section .widgets{
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .right-section .widgets .disk{
+        width: 48%;
+    }
+
+    .right-section .widgets .bottom{
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .right-section .widgets .bottom button{
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    
+    .main{
+        padding: 100px 15px 0;
+    }
+
+    .main .header .search{
+        width: 68%;
+    }
+
+    .right-section .profile{
+        width: 94%;
+    }
+
+    .right-section .widgets .disk .info h5{
+        font-size: 14px;
+    }
+
+    .right-section .widgets .disk .info p{
+        font-size: 13px;
+    }
+
+}
